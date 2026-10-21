@@ -3,8 +3,6 @@
 **Prepared For:** ABJ Car Detailing Studio (Islamabad, Pakistan)  
 **Location:** Melody Market, Civic Centre, G-6 Markaz, Islamabad  
 **Project:** Official Digital Showroom & Automated Bay Reservation Platform  
-**Live Development Preview:** `http://localhost:3000`  
-**GitHub Source Code:** [https://github.com/syedmeesum1/abj-cars](https://github.com/syedmeesum1/abj-cars)  
 **Status:** Complete & Ready for Domain Launch  
 
 ---

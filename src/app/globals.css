@@ -1,26 +1,74 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #EDF3F8;
+    --foreground: #0f172a;
+    --font-heading: var(--font-heading);
+    --font-body: var(--font-body);
+    --primary-blue: #0077EE;
+  }
+
+  body {
+    background-color: #EDF3F8;
+    color: #0f172a;
+    font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), Impact, sans-serif;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Giant Outline Ghost Title matching reference layout */
+.ghost-title {
+  font-family: var(--font-heading), Impact, sans-serif;
+  font-size: clamp(4.5rem, 18vw, 16rem);
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  color: rgba(0, 119, 238, 0.05);
+  -webkit-text-stroke: 3px rgba(0, 119, 238, 0.3);
+  user-select: none;
+  pointer-events: none;
+}
+
+.ghost-title-solid {
+  font-family: var(--font-heading), Impact, sans-serif;
+  font-size: clamp(3.5rem, 14vw, 13rem);
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+  color: rgba(195, 215, 235, 0.65);
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Button & Accent Utilities */
+.btn-electric {
+  background-color: #0077EE;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+.btn-electric:hover {
+  background-color: #0066cc;
+  box-shadow: 0 4px 20px rgba(0, 119, 238, 0.35);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #EDF3F8;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }
